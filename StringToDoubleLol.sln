@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToDoubleLol", "StringToDoubleLol\StringToDoubleLol.csproj", "{CBA30E79-781E-4E86-A851-4BB1F2C2B789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringToDouble.Tests", "StringToDouble.Tests\StringToDouble.Tests.csproj", "{C90E3DAD-7774-4262-9527-2BB621F75F44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CBA30E79-781E-4E86-A851-4BB1F2C2B789}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBA30E79-781E-4E86-A851-4BB1F2C2B789}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBA30E79-781E-4E86-A851-4BB1F2C2B789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C90E3DAD-7774-4262-9527-2BB621F75F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C90E3DAD-7774-4262-9527-2BB621F75F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C90E3DAD-7774-4262-9527-2BB621F75F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C90E3DAD-7774-4262-9527-2BB621F75F44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

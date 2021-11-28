@@ -3,7 +3,7 @@
 namespace StringToDoubleLol
 {
 
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -28,7 +28,7 @@ namespace StringToDoubleLol
             return result;
         }
 
-        private static Symbol GetSymbol(char c)
+        public static Symbol GetSymbol(char c)
         {
             Symbol result;
             switch (c)
