@@ -7,7 +7,7 @@ namespace StringToDoubleLol
     {
         static void Main(string[] args)
         {
-            string pattern = "1323.543";
+            string pattern = "-1323,5430";
             double result = ConvertToDouble(pattern);
             Console.WriteLine(result);
         }
@@ -18,14 +18,41 @@ namespace StringToDoubleLol
 
             double result = 0;
             bool minus = false;
+            double divider = 1;
 
             for (int i = 0; i < pattern.Length; i++)
             {
+                char currentChar = pattern[i];
                 Symbol symbol;
-                symbol = GetSymbol(pattern[i]);
-                p.MoveNext(symbol);
+                symbol = GetSymbol(currentChar);
+                var process = p.MoveNext(symbol);
+                switch (process)
+                {
+                    case ProcessState.Start:
+                        break;
+                    case ProcessState.SignCheck:
+                        if (currentChar == '-')
+                            minus = true;
+                        break;
+                    case ProcessState.FirstPart:
+                        result *= 10;
+                        result += (currentChar - '0');
+                        break;
+                    case ProcessState.Point:
+                        break;
+                    case ProcessState.LastPart:
+                        divider *= 10;
+                        result += (currentChar - '0') / divider;
+                        break;
+                    case ProcessState.Error:
+                        break;
+                    case ProcessState.Finish:
+                        break;
+                    default:
+                        break;
+                }
             }
-            return result;
+            return minus? -result : result;
         }
 
         public static Symbol GetSymbol(char c)

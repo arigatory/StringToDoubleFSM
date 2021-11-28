@@ -5,10 +5,12 @@ namespace StringToDoubleLol
 {
     public class Process
     {
+        public Double Value { get; set; }
         class StateTransition
         {
             readonly ProcessState CurrentState;
             readonly Symbol Symbol;
+            
 
             public StateTransition(ProcessState currentState, Symbol symbol)
             {

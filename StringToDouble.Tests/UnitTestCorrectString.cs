@@ -10,7 +10,7 @@ namespace StringToDouble.Tests
         public void CanDetectWrongStrings()
         {
             var p = new Process();
-            var strings = new string[] { ".34", "d2k2", "132.232d", "12k32.343", "d324.343", "23+4.324", "234.23-4", "234.234.343"};
+            var strings = new string[] { ".34", "d2k2", "132.232d", "12k32.343", "d324.343", "23+4.324", "234.23-4", "234.234.343", "", "-", ","};
 
             var exeption = Record.Exception(() =>
             {
@@ -32,7 +32,7 @@ namespace StringToDouble.Tests
         public void CanDetectCorrectStrings()
         {
             var p = new Process();
-            var strings = new string[] { "1.34", "22", "132.232", "-343", "00324.33", "234,324", "+234.234", "-34234.343" };
+            var strings = new string[] { "1.34", "22", "132.232", "-343", "00324.33", "234,324", "+234.234", "-34234.343", "0" };
 
             var exeption = Record.Exception(() =>
             {
